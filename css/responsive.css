@@ -1,0 +1,174 @@
+@media screen and (max-width: 1024px) {
+  .about-sec .container {
+    width: 90%;
+  }
+  .about-sec #story {
+    width: 85%;
+  }
+  .about-sec .my-skill #skill-set {
+    width: 90%;
+  }
+  .about-sec .new-skill #skill-goal {
+    width: 90%;
+  }
+  .project1 .project-info {
+    width: 50%;
+  }
+  .project1 .mockups {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 1600px) {
+  .project1 .project-info {
+    width: 70%;
+  }
+  .project1 .mockups {
+    width: 30%;
+  }
+  .project2 .project-info {
+    width: 70%;
+  }
+  .project2 .mockups {
+    width: 30%;
+  }
+  .project3 .project-info {
+    width: 70%;
+  }
+  .project3 .mockups {
+    width: 30%;
+  }
+  .project4 .project-info {
+    width: 70%;
+  }
+  .project4 .mockups {
+    width: 30%;
+  }
+  .project5 .project-info {
+    width: 70%;
+  }
+  .project5 .mockups {
+    width: 30%;
+  }
+  .project6 .project-info {
+    width: 70%;
+  }
+  .project6 .mockups {
+    width: 30%;
+  }
+}
+
+/* 4k 2560px-1500px */
+@media screen and (min-width: 1601px) {
+  .project1 {
+    height: 40vh;
+  }
+  .project1 img {
+    height: 40vh;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: 0px 30%;
+       object-position: 0px 30%;
+  }
+  .project1 .info-slide {
+    height: 40vh;
+  }
+  .project1 .mockups {
+    width: 25%;
+    margin-right: -10%;
+  }
+  .project2 {
+    height: 40vh;
+  }
+  .project2 img {
+    height: 40vh;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: 0px 30%;
+       object-position: 0px 30%;
+  }
+  .project2 .info-slide-lawn {
+    height: 40vh;
+  }
+  .project2 .mockups {
+    width: 25%;
+    margin-right: -10%;
+  }
+  .project3 {
+    height: 40vh;
+  }
+  .project3 img {
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: 0px 45%;
+       object-position: 0px 45%;
+    height: 40vh;
+  }
+  .project3 .info-slide-foodie {
+    height: 40vh;
+  }
+  .project3 .mockups {
+    width: 25%;
+    margin-right: -10%;
+  }
+  .project4 {
+    height: 40vh;
+  }
+  .project4 img {
+    height: 40vh;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: 0px 95%;
+       object-position: 0px 95%;
+  }
+  .project4 .info-slide-shine {
+    height: 40vh;
+  }
+  .project4 .mockups {
+    width: 25%;
+    margin-right: -10%;
+  }
+  .project5 {
+    height: 40vh;
+  }
+  .project5 img {
+    height: 40vh;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: 0px 50%;
+       object-position: 0px 50%;
+  }
+  .project5 .info-slide-kohls {
+    height: 40vh;
+  }
+  .project5 .mockups {
+    width: 25%;
+    margin-right: -10%;
+  }
+  .project6 {
+    height: 40vh;
+  }
+  .project6 img {
+    -o-object-fit: cover;
+       object-fit: cover;
+    height: 40vh;
+    -o-object-position: 0px 30%;
+       object-position: 0px 30%;
+  }
+  .project6 .info-slide-apple {
+    height: 40vh;
+  }
+  .project6 .mockups {
+    width: 25%;
+    margin-right: -10%;
+  }
+  .contact-content {
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  .contact-content #form {
+    width: 30%;
+  }
+}
+/*# sourceMappingURL=responsive.css.map */

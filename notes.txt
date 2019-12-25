@@ -1,0 +1,13 @@
+Font Family =  -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+
+Images::
+https://i.postimg.cc/2yhVwSXQ/AA.jpg
+https://i.postimg.cc/4xJm6Zvc/animal-animal-photography-cute-33102.jpg
+https://i.postimg.cc/L6kJghPR/apple.jpg
+https://i.postimg.cc/T3ChQSQ4/contact.jpg
+https://i.postimg.cc/2yR5Vf8V/dallas.jpg
+https://i.postimg.cc/KzgzGYb6/deus.jpg
+https://i.postimg.cc/zfvvQjcX/food.jpg
+https://i.postimg.cc/KvhKYtRJ/github.png
+https://i.postimg.cc/J7kDmp4s/github-sign.png
+https://i.postimg.cc/ZqQnzdGP/lawns.jpg
