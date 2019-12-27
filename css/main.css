@@ -1049,6 +1049,7 @@
 @media screen and (max-width: 1024px) {
   .work-sec #grid .info-slide p {
     padding-bottom: 12%;
+    font-size: 20px;
   }
 }
 
@@ -1056,12 +1057,6 @@
   .work-sec #grid .info-slide p {
     line-height: 1.5;
     padding-bottom: 3%;
-  }
-}
-
-@media screen and (height: 1024px) {
-  .work-sec #grid .info-slide p {
-    font-size: 20px;
   }
 }
 
@@ -1081,7 +1076,6 @@
 
 @media screen and (height: 568px) {
   .work-sec #grid .info-slide p {
-    font-size: 16px;
     padding-top: 0;
   }
 }
