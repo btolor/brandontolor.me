@@ -15,7 +15,7 @@ $(document).ready(function () {
             $("#open-mobile-menu").css("color", "red");
             $("#white-logo").css("display", "none");
             $("#red-logo").css("display", "block");
-            $("header").css({"background-color": "white", "padding": "1% 0 0","border-bottom":"1px solid black"});
+            $("header").css({"background-color": "white", "padding": "1% 0 0","border-bottom":"0.5px solid black"});
             $("#close-mobile-menu").css("color", "red");
 
         }

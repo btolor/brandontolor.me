@@ -8,7 +8,7 @@ $city-night : "https://i.postimg.cc/T3ChQSQ4/contact.jpg"
 
 /* Header */
 #header
-    padding: 3% 0 1%  
+    padding: 2% 0 1%  
     position: fixed
     width: 100%
     top: 0
@@ -29,7 +29,18 @@ $city-night : "https://i.postimg.cc/T3ChQSQ4/contact.jpg"
                 +text($text,red,28px,700)
             img 
                 width: 30%
-                padding-bottom: 10px
+                padding: 10px 0
+                +media-max(1024px)
+                    width: 26%
+                +media-max(768px)
+                    width: 24%
+            #red-logo
+                width: 25%
+                +media-max(1024px)
+                    width: 22%
+                +media-max(768px)
+                    width: 20%
+                    padding: 5px 0
         // .nav-bar
         //     flex-grow: 1
         //     +fullFlex(none, row, space-around)
@@ -52,11 +63,13 @@ $city-night : "https://i.postimg.cc/T3ChQSQ4/contact.jpg"
             color: white
             transition: 0.3s
             font-size: 28px
+            align-self: center
             // &:hover
             //     color: #cc0000
             // +media-max(800px)
             //     display: block
         #close-mobile-menu
+            align-self: center
             display: none
     .mobile-nav
         position: fixed

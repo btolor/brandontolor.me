@@ -2,7 +2,7 @@
 /* Variables... */
 /* Header */
 #header {
-  padding: 3% 0 1%;
+  padding: 2% 0 1%;
   position: fixed;
   width: 100%;
   top: 0;
@@ -47,7 +47,36 @@
 
 #header .container .home-title img {
   width: 30%;
-  padding-bottom: 10px;
+  padding: 10px 0;
+}
+
+@media screen and (max-width: 1024px) {
+  #header .container .home-title img {
+    width: 26%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #header .container .home-title img {
+    width: 24%;
+  }
+}
+
+#header .container .home-title #red-logo {
+  width: 25%;
+}
+
+@media screen and (max-width: 1024px) {
+  #header .container .home-title #red-logo {
+    width: 22%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #header .container .home-title #red-logo {
+    width: 20%;
+    padding: 5px 0;
+  }
 }
 
 #header .container .mobile-nenu-btn {
@@ -57,9 +86,15 @@
   -webkit-transition: 0.3s;
   transition: 0.3s;
   font-size: 28px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 
 #header .container #close-mobile-menu {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
   display: none;
 }
 
