@@ -8,70 +8,74 @@ $city-night : "https://i.postimg.cc/T3ChQSQ4/contact.jpg"
 
 /* Header */
 #header
-    padding: 1% 0  
-    position: sticky
+    padding: 3% 0 1%  
+    position: fixed
+    width: 100%
     top: 0
-    background: white
-    border-bottom: 1px solid black
+    background: transparent
     z-index: 1
+    transition: 0.3s
     .container
-        +center(95% ,0 auto)
+        +center(90% ,0 auto)
         +fullFlex(flex, row, space-between)
         align-items: center
         /* Title-Sec */
         .home-title
-            flex-grow: 3
             /* Logo */
             #logo
                 text-decoration: none
                 text-transform: uppercase
                 font-style: italic
                 +text($text,red,28px,700)
-        .nav-bar
-            flex-grow: 1
-            +fullFlex(flex, row, space-around)
-            align-self: flex-center
-            a
-                text-decoration: none
-                text-transform: uppercase
-                +text($text,red,24px,700)
-                transition: 0.3s
-                margin-bottom: 2px 
-                &:hover
-                    color: #cc0000
-                +media-max(1024px)
-                    font-size: 20px
-                +media-max(800px)
-                    display: none
+            img 
+                width: 30%
+                padding-bottom: 10px
+        // .nav-bar
+        //     flex-grow: 1
+        //     +fullFlex(none, row, space-around)
+            // align-self: flex-center
+            // a
+            //     text-decoration: none
+            //     text-transform: uppercase
+            //     +text($text,red,24px,700)
+            //     transition: 0.3s
+            //     margin-bottom: 2px 
+            //     &:hover
+            //         color: #cc0000
+            //     +media-max(1024px)
+            //         font-size: 20px
+            //     +media-max(800px)
+            //         display: none
         .mobile-nenu-btn
-            display: none
+            display: block
             text-decoration: none
-            color: red
+            color: white
             transition: 0.3s
             font-size: 28px
-            &:hover
-                color: #cc0000
-            +media-max(800px)
-                display: block
+            // &:hover
+            //     color: #cc0000
+            // +media-max(800px)
+            //     display: block
         #close-mobile-menu
             display: none
-.mobile-nav
-    position: fixed
-    +flex(none,column)
-    z-index: 1
-    background: white
-    width: 100%
-    text-align: center
-    border-bottom: 1px solid black
-    a 
-        text-decoration: none
-        +text($text,red,26px,700)
-        text-transform: uppercase
-        padding: 1% 0
-        &:hover
-            border: 1px solid black
-            color: white
-            background-color: rgba(255,0,0,.8)
+    .mobile-nav
+        position: fixed
+        +flex(none,column)
+        z-index: 1
+        background: white
+        width: 100%
+        text-align: center
+        border-top: 1px solid black
+        border-bottom: 1px solid black
+        a 
+            text-decoration: none
+            +text($text,red,26px,700)
+            text-transform: uppercase
+            padding: 1% 0
+            &:hover
+                border: 1px solid black
+                color: white
+                background-color: rgba(255,0,0,.8)
 #content-bg
     +bg-img($city, 100% 100%)
     .content
