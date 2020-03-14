@@ -1,44 +1,5 @@
-<!-- Start of PHP Contact Form Code -->
-<?php 
-                
-                $ToAddress = "brandontolor@yahoo.com";
-                $emailSubject = "OPEN URGENT Email from BrandonTolor.me";
-                $name = "";
-                $email = "";
-                $message = "";
-
-
-                if(isset($_POST['submit'])){
-                    if(empty($_POST['name'])){
-                        echo "name field error";
-                    }else{
-                        $name = $_POST['name'];
-                    }
-
-                    if(empty($_POST['email'])){
-                        echo "email field error";
-                    }else{
-                        $emailer = $_POST['email'];
-                    }
-
-                    if(empty($_POST['mesg'])){
-                        echo "message field error";
-                    }else{
-                        $message = $_POST['mesg'];
-                    }
-
-                    $email_header = "From: ". $emailer;
-                    $email_txt = "You have an email from ". $name . ".\n\n".$message;
-
-                    mail($ToAddress,$emailSubject,$email_txt,$email_header);
-                    header("Location: index.php?EmailSent");
-                }
-            ?>
-            <!-- End of PHP Contact Form Code -->
-
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -59,33 +20,39 @@
 
             <!-- start of home-title -->
             <div class="home-title">
-                <a href="#home-page" id="logo">Brandon Tolor</a>
+                <!-- <a href="#home-page" id="logo">Brandon Tolor</a> -->
+                <a href="#home-page" class="logo-link">
+                <img id="white-logo" src="images/white-letter-b-logo.png" alt="Brandon Tolor Logo">
+            </a>
+            <a href="#home-page" class="logo-link">
+                <img id="red-logo" style="display: none;" src="images/red-letter-b-logo.png" alt="Brandon Tolor Logo">
+            </a>
             </div>
             <!-- end of home-title -->
             <!-- start of nav-bar -->
-            <nav class="nav-bar">
+            <!-- <nav class="nav-bar">
                 <a href="#about-sec" id="about-link">My Story</a>
                 <a href="#work-sec" id="work-examples-link">work examples</a>
                 <a href="#contact-sec" id="contact-link">contact</a>
                 <a href="http://tolorboy.website/" target="_blank" id="blog-link">blog</a>
-            </nav>
+            </nav> -->
             <!-- end of nav-bar -->
 
             <a href="#" class="mobile-nenu-btn" id="open-mobile-menu"><i class="fa fa-bars" aria-hidden="true"></i></a>
             <a href="#" class="mobile-nenu-btn" id="close-mobile-menu"><i class="fa fa-times-circle"
                     aria-hidden="true"></i></a>
         </div>
-
-    </header>
-    <!-- end of header -->
-    <!-- start of mobile-nav -->
+<!-- start of mobile-nav -->
     <div class="mobile-nav" id="mobile-nav">
         <a href="#about-sec" id="about-link">My Story</a>
         <a href="#work-sec" id="work-examples-link">work examples</a>
         <a href="#contact-sec" id="contact-link">contact</a>
-        <a href="http://tolorboy.website/" target="_blank" id="blog-link">blog</a>
+        <!-- <a href="http://tolorboy.website/" target="_blank" id="blog-link">blog</a> -->
     </div>
     <!-- end of mobile-nav -->
+    </header>
+    <!-- end of header -->
+    
 
 
     <!-- start of content-bg -->
@@ -112,14 +79,11 @@
                 <!-- end of btns -->
                 <!-- start of social -->
                 <div class="social">
-                    <a href="https://github.com/btolor" target="_blank" id="github-link"
-                        aria-label="https://github.com/btolor"><i class="fa fa-github-square"
+                    <a href="https://github.com/btolor" target="_blank" id="github-link" aria-label="https://github.com/btolor"><i class="fa fa-github-square"
                             aria-hidden="true"></i></a>
-                    <a href="https://twitter.com/Tolor_Boy" target="_blank" id="twitter-link"
-                        aria-label="https://twitter.com/Tolor_Boy"><i class="fa fa-twitter-square"
-                            aria-hidden="true"></i></a>
-                    <a href="https://www.linkedin.com/in/brandon-tolor-343098106/" target="_blank" id="linkedin-link"
-                        aria-label="https://www.linkedin.com/in/brandon-tolor-343098106/"><i
+                    <a href="https://twitter.com/Tolor_Boy" target="_blank" id="twitter-link" aria-label="https://twitter.com/Tolor_Boy"><i
+                            class="fa fa-twitter-square" aria-hidden="true"></i></a>
+                    <a href="https://www.linkedin.com/in/brandon-tolor-343098106/" target="_blank" id="linkedin-link" aria-label="https://www.linkedin.com/in/brandon-tolor-343098106/"><i
                             class="fa fa-linkedin-square" aria-hidden="true"></i></a>
                 </div>
                 <!-- end of social -->
@@ -152,8 +116,7 @@
                     <h2 id="skills-title">My Skills</h2>
                     <p id="skill-set">
                         The skills that I have are <span>HTML, CSS, Javascript, jQuery, and good attention to
-                            detail</span>. I am great at turning <span>PSD files into HTML and CSS</span> and I am also
-                        familiar
+                        detail</span>. I am great at turning <span>PSD files into HTML and CSS</span> and I am also familiar 
                         with the concepts of object-oriented programming as well.
                     </p>
                 </div>
@@ -182,12 +145,17 @@
     <div class="work-sec" id="work-sec">
         <h1 id="work-title">Work Examples</h1>
 
+        <!-- start of filter-row -->
+        <div class="filter-row">
+            
+        </div>
+        <!-- end of filter-row -->
+
         <!-- start of grid -->
         <div id="grid">
             <!-- start of project1 -->
             <div class="project1">
-                <img id="project1-img" src="https://i.postimg.cc/4xJm6Zvc/animal-animal-photography-cute-33102.jpg"
-                    alt="Puppy landing-page image.">
+                <img id="project1-img" src="https://i.postimg.cc/4xJm6Zvc/animal-animal-photography-cute-33102.jpg" alt="Puppy landing-page image.">
 
                 <!-- start of info-slide -->
                 <div class="info-slide" id="info-slide">
@@ -195,8 +163,7 @@
                         <h1>Pupppy</h1>
                     </a>
                     <p>
-                        This is a landing page for an eCommerce store called Puppy.This page was built with HTML and
-                        CSS/Sass.
+                        This is a landing page for an eCommerce store called Puppy.This page was built with HTML and CSS/Sass.
                     </p>
                     <div class="project-btns">
                         <a href="https://github.com/btolor/Puppy-Landing-Page" target="_blank">View Code <i
@@ -223,10 +190,8 @@
                         CSS/Sass, and Javascript/jQuery.
                     </p>
                     <div class="project-btns">
-                        <a href="https://github.com/btolor/LawnLove-Landing-Page" target="_blank">View Code<i
-                                class="fa fa-github" aria-hidden="true"></i></a>
-                        <a href="https://btolor.github.io/LawnLove-Landing-Page/#" target="_blank">View Live<i
-                                class="fa fa-desktop" aria-hidden="true"></i></a>
+                        <a href="https://github.com/btolor/LawnLove-Landing-Page" target="_blank">View Code<i class="fa fa-github" aria-hidden="true"></i></a>
+                        <a href="https://btolor.github.io/LawnLove-Landing-Page/#" target="_blank">View Live<i class="fa fa-desktop" aria-hidden="true"></i></a>
                     </div>
                 </div>
                 <!-- end of info-slide -->
@@ -244,8 +209,7 @@
                         <h1>Foodie</h1>
                     </a>
                     <p>
-                        This landing page is for a pop-up restaurant and food educational blog called Foodie to spread
-                        its brand awareness.
+                        This landing page is for a pop-up restaurant and food educational blog called Foodie to spread its brand awareness.
                         This page was built with HTML and CSS/Sass.
                     </p>
                     <div class="project-btns">
@@ -272,15 +236,13 @@
                         <h1>American Airlines</h1>
                     </a>
                     <p>
-                        This is a responsive transactional email template for American Airlines.
-                        This email template was built using the Sass version of the ZURB Foundation
+                        This is a responsive transactional email template for American Airlines. 
+                        This email template was built using the Sass version of the ZURB Foundation 
                         framework.
                     </p>
                     <div class="project-btns">
-                        <a href="https://github.com/btolor/American_Airlines_Email" target="_blank">View Code <i
-                                class="fa fa-github" aria-hidden="true"></i></a>
-                        <a href="https://btolor.github.io/American_Airlines_Email/" target="_blank">View Live <i
-                                class="fa fa-desktop" aria-hidden="true"></i></a>
+                        <a href="https://github.com/btolor/American_Airlines_Email" target="_blank">View Code <i class="fa fa-github" aria-hidden="true"></i></a>
+                        <a href="https://btolor.github.io/American_Airlines_Email/" target="_blank">View Live <i class="fa fa-desktop" aria-hidden="true"></i></a>
                     </div>
                 </div>
                 <!-- end of info-slide -->
@@ -298,15 +260,13 @@
                         <h1>Deus Ex Machina</h1>
                     </a>
                     <p>
-                        This is a responsive promotional email template for Deus Ex Machina.
-                        This email template was built using the Sass version of the ZURB
+                        This is a responsive promotional email template for Deus Ex Machina. 
+                        This email template was built using the Sass version of the ZURB 
                         Foundation framework.
                     </p>
                     <div class="project-btns">
-                        <a href="https://github.com/btolor/Deus_Email_Template" target="_blank">View Code <i
-                                class="fa fa-github" aria-hidden="true"></i></a>
-                        <a href="https://btolor.github.io/Deus_Email_Template/" target="_blank">View Live <i
-                                class="fa fa-desktop" aria-hidden="true"></i></a>
+                        <a href="https://github.com/btolor/Deus_Email_Template" target="_blank">View Code <i class="fa fa-github" aria-hidden="true"></i></a>
+                        <a href="https://btolor.github.io/Deus_Email_Template/" target="_blank">View Live <i class="fa fa-desktop" aria-hidden="true"></i></a>
                     </div>
                 </div>
                 <!-- end of info-slide -->
@@ -324,8 +284,7 @@
                         <h1>Apple Music</h1>
                     </a>
                     <p>
-                        This is a responsive newsletter email is for the music and video streaming service developed by
-                        Apple Inc.
+                        This is a responsive newsletter email is for the music and video streaming service developed by Apple Inc. 
                         This email was built using hand-coded HTML and CSS/Sass.
                     </p>
                     <div class="project-btns">
@@ -360,11 +319,13 @@
 
         <!-- start of contact-content -->
         <div class="contact-content">
-
-            
+            <!-- <div id="contact-story">
+                <h1>Get In touch!</h1>
+                <h2>Tell me how i can help you<br>solve your problem.</h2>
+            </div> -->
 
             <!-- start of form -->
-            <form action="index.php" method="post" id="form">
+            <form netlify id="form">
                 <!-- start of container -->
                 <div class="container">
                     <h1 id="contact-title">Let's Talk</h1>
@@ -376,7 +337,7 @@
                         <!-- start of name -->
                         <div class="name" style="position: relative;">
                             <label for="name" style="position: absolute;color: transparent;">Name</label>
-                            <input type="text" name="name" id="name" placeholder="Your Name">
+                            <input type="text" name="Name" id="name" placeholder="Your Name">
                             <!-- <input type="text" name="lName" id="l-name" placeholder="Last Name"> -->
                         </div>
                         <!-- end of name -->
@@ -391,13 +352,13 @@
                         <!-- end of email-phone -->
 
                         <div style="position: relative;">
-                            <label for="mesg" style="position: absolute;color: transparent;">Message</label>
+                            <label for="msg" style="position: absolute;color: transparent;">Message</label>
                             <textarea name="mesg" id="msg" placeholder="Say Hello" required></textarea>
 
                         </div>
 
-
-                        <input type="submit" name="submit" value="Submit" id="submit-btn">
+                        
+                        <input type="submit" value="Submit" id="submit-btn">
 
                     </div>
                     <!-- end of input-sec -->
@@ -419,13 +380,12 @@
         <!-- <a href="#home-page" id="top-btn"><i class="fa fa-arrow-circle-up" aria-hidden="true"></i></a> -->
         <!-- start of social -->
         <div class="social">
-            <a href="https://github.com/btolor" target="_blank" id="github-link"
-                aria-label="https://github.com/btolor"><i class="fa fa-github-square" aria-hidden="true"></i></a>
-            <a href="https://twitter.com/Tolor_Boy" target="_blank" id="twitter-link"
-                aria-label="https://twitter.com/Tolor_Boy"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
-            <a href="https://www.linkedin.com/in/brandon-tolor-343098106/" target="_blank" id="linkedin-link"
-                aria-label="https://www.linkedin.com/in/brandon-tolor-343098106/"><i class="fa fa-linkedin-square"
+            <a href="https://github.com/btolor" target="_blank" id="github-link" aria-label="https://github.com/btolor"><i class="fa fa-github-square"
                     aria-hidden="true"></i></a>
+            <a href="https://twitter.com/Tolor_Boy" target="_blank" id="twitter-link" aria-label="https://twitter.com/Tolor_Boy"><i class="fa fa-twitter-square"
+                    aria-hidden="true"></i></a>
+            <a href="https://www.linkedin.com/in/brandon-tolor-343098106/" target="_blank" id="linkedin-link" aria-label="https://www.linkedin.com/in/brandon-tolor-343098106/"><i
+                    class="fa fa-linkedin-square" aria-hidden="true"></i></a>
         </div>
         <!-- end of social -->
         <p id="copyrights">© 2019 All Rights Reserved Brandon Tolor</p>
@@ -433,7 +393,7 @@
     <!-- end of footer -->
     <!-- Javascript JQuery Scripts -->
     <script src="/js/jquery-3.4.1.min.js"></script>
-    <script src="/js/brandontolor.js"></script>
+    <script src="/js/original-script.js"></script>
 </body>
 
 </html>

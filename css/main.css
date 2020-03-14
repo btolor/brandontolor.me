@@ -1,18 +1,178 @@
 /* Import the mixins collection file... */
 /* Variables... */
 /* Header */
-#header {
-  padding: 2% 0 1%;
-  position: fixed;
-  width: 100%;
-  top: 0;
-  background: transparent;
-  z-index: 1;
+.header {
+  border-bottom: 1px solid #626e75;
+}
+
+.header .container {
+  width: 90%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 2.5% 0 1%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media screen and (max-width: 1024px) {
+  .header .container {
+    padding: 3% 0 2%;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .header .container {
+    padding: 6% 0 2.5%;
+  }
+}
+
+.header .container .logo-sec a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-decoration: none;
+}
+
+.header .container .logo-sec a img {
+  width: 60px;
+}
+
+@media screen and (max-width: 1024px) {
+  .header .container .logo-sec a img {
+    width: 50px;
+  }
+}
+
+.header .container .logo-sec a span {
+  padding-left: 5px;
+  color: #f8df28;
+  letter-spacing: -1px;
+  font-family: "Montserrat Alternates", sans-serif;
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.header .container .mobile-menu-icon {
+  display: none;
+}
+
+@media screen and (max-width: 1024px) {
+  .header .container .mobile-menu-icon {
+    display: block;
+  }
+}
+
+.header .container .mobile-menu-icon a {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  color: #1356b9;
+  font-size: 26px;
+  margin-left: 15px;
+  -webkit-transition: .3s;
+  transition: .3s;
+  border: 2px solid #1356b9;
+  padding: 1px 5px;
+  border-radius: 4px;
+}
+
+.header .container .mobile-menu-icon a:hover {
+  color: #f4ac12;
+  border-color: #f4ac12;
+}
+
+.header .container .menu-sec {
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
 
-#header .container {
+@media screen and (max-width: 1024px) {
+  .header .container .menu-sec {
+    display: none;
+  }
+}
+
+.header .container .menu-sec a {
+  text-decoration: none;
+  font-family: "Lato", sans-serif;
+  margin: 0 32px;
+  text-transform: capitalize;
+  color: #1356b9;
+  font-size: 22px;
+  font-weight: 600;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.header .container .menu-sec a:hover {
+  color: #f4ac12;
+}
+
+.header .container .socail-sec {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+@media screen and (max-width: 1024px) {
+  .header .container .socail-sec {
+    display: none;
+  }
+}
+
+.header .container .socail-sec a {
+  color: #90a3b2;
+  font-size: 30px;
+  margin-left: 15px;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.header .container .socail-sec a:hover {
+  color: #f4ac12;
+}
+
+/* Main */
+main {
+  /* Top-Hero */
+  /* Work-Examples */
+  /* About */
+  /* Contact */
+}
+
+main .top-hero {
+  background-color: #1356b9;
+  height: 90vh;
+}
+
+@media screen and (max-width: 1024px) {
+  main .top-hero {
+    height: 100vh;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  main .top-hero {
+    height: 108vh;
+  }
+}
+
+main .top-hero .container {
   width: 90%;
   margin: 0 auto;
   display: -webkit-box;
@@ -28,666 +188,85 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  /* Title-Sec */
-}
-
-#header .container .home-title {
-  /* Logo */
-}
-
-#header .container .home-title #logo {
-  text-decoration: none;
-  text-transform: uppercase;
-  font-style: italic;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  color: red;
-  font-size: 28px;
-  font-weight: 700;
-}
-
-#header .container .home-title img {
-  width: 30%;
-  padding: 10px 0;
+  padding-top: 16vh;
 }
 
 @media screen and (max-width: 1024px) {
-  #header .container .home-title img {
-    width: 26%;
+  main .top-hero .container {
+    padding-top: 20vh;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
 
-@media screen and (max-width: 768px) {
-  #header .container .home-title img {
-    width: 24%;
-  }
-}
-
-#header .container .home-title #red-logo {
-  width: 25%;
+main .top-hero .container .info {
+  text-align: center;
+  padding-left: 20px;
+  width: 50%;
 }
 
 @media screen and (max-width: 1024px) {
-  #header .container .home-title #red-logo {
-    width: 22%;
+  main .top-hero .container .info {
+    width: 100%;
   }
 }
 
-@media screen and (max-width: 768px) {
-  #header .container .home-title #red-logo {
-    width: 20%;
-    padding: 5px 0;
-  }
-}
-
-#header .container .mobile-nenu-btn {
-  display: block;
-  text-decoration: none;
+main .top-hero .container .info h1 {
+  padding: 20px 0;
+  font-size: 46px;
+  font-family: "Montserrat Alternates", sans-serif;
+  font-weight: 800;
   color: white;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
+}
+
+main .top-hero .container .info h4 {
   font-size: 28px;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
+  font-family: "Lato", sans-serif;
+  color: #f8df28;
+  letter-spacing: 2px;
+  font-weight: 800;
 }
 
-#header .container #close-mobile-menu {
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-  display: none;
+main .top-hero .container .graphic {
+  width: 50%;
 }
 
-#header .mobile-nav {
-  position: fixed;
-  display: none;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  z-index: 1;
-  background: white;
+@media screen and (max-width: 1024px) {
+  main .top-hero .container .graphic {
+    text-align: center;
+    padding-top: 10vh;
+  }
+}
+
+main .top-hero .container .graphic img {
   width: 100%;
-  text-align: center;
-  border-top: 1px solid black;
-  border-bottom: 1px solid black;
 }
 
-#header .mobile-nav a {
-  text-decoration: none;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  color: red;
-  font-size: 26px;
-  font-weight: 700;
-  text-transform: uppercase;
-  padding: 1% 0;
-}
-
-#header .mobile-nav a:hover {
-  border: 1px solid black;
-  color: white;
-  background-color: rgba(255, 0, 0, 0.8);
-}
-
-#content-bg {
-  background-image: url("https://i.postimg.cc/2yR5Vf8V/dallas.jpg");
-  background-size: 100% 100%;
-}
-
-#content-bg .content {
-  height: 100vh;
-  background-color: rgba(255, 0, 0, 0.7);
-}
-
-#content-bg .content .lpg-container {
-  text-align: center;
+main .work-examples .container {
+  padding: 50px 0 42px;
   width: 90%;
   margin: 0 auto;
-  padding-top: 25vh;
 }
 
-@media screen and (max-width: 800px) {
-  #content-bg .content .lpg-container {
-    padding-top: 38%;
-  }
-}
-
-@media screen and (max-width: 658px) {
-  #content-bg .content .lpg-container {
-    padding-top: 44%;
-  }
-}
-
-@media screen and (max-width: 500px) {
-  #content-bg .content .lpg-container {
-    padding-top: 65%;
-  }
-}
-
-@media screen and (max-width: 375px) {
-  #content-bg .content .lpg-container {
-    padding-top: 30vh;
-  }
-}
-
-@media screen and (height: 823px) {
-  #content-bg .content .lpg-container {
-    padding-top: 22vh;
-  }
-}
-
-@media screen and (height: 812px) {
-  #content-bg .content .lpg-container {
-    padding-top: 20vh;
-  }
-}
-
-@media screen and (height: 736px) {
-  #content-bg .content .lpg-container {
-    padding-top: 18vh;
-  }
-}
-
-@media screen and (height: 731px) {
-  #content-bg .content .lpg-container {
-    padding-top: 20vh;
-  }
-}
-
-@media screen and (height: 700px) {
-  #content-bg .content .lpg-container {
-    padding-top: 20vh;
-  }
-}
-
-@media screen and (height: 667px) {
-  #content-bg .content .lpg-container {
-    padding-top: 15vh;
-  }
-}
-
-@media screen and (height: 640px) {
-  #content-bg .content .lpg-container {
-    padding-top: 20vh;
-  }
-}
-
-@media screen and (height: 568px) {
-  #content-bg .content .lpg-container {
-    padding-top: 15vh;
-  }
-}
-
-#content-bg .content .lpg-container #top {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  color: white;
-  font-size: 46px;
-  font-weight: 700;
-}
-
-@media screen and (max-width: 800px) {
-  #content-bg .content .lpg-container #top {
-    font-size: 36px;
-  }
-}
-
-@media screen and (max-width: 658px) {
-  #content-bg .content .lpg-container #top {
-    font-size: 32px;
-  }
-}
-
-#content-bg .content .lpg-container #top br {
-  display: none;
-}
-
-@media screen and (max-width: 500px) {
-  #content-bg .content .lpg-container #top br {
-    display: block;
-  }
-}
-
-#content-bg .content .lpg-container #top #me {
-  padding: 1% 0 3%;
-}
-
-@media screen and (max-width: 800px) {
-  #content-bg .content .lpg-container #top #me {
-    font-size: 5vw;
-  }
-}
-
-@media screen and (max-width: 425px) {
-  #content-bg .content .lpg-container #top #me {
-    padding-top: 4%;
-    font-size: 5.5vw;
-  }
-}
-
-#content-bg .content .lpg-container #top #welcome {
-  font-size: 28px;
-}
-
-@media screen and (max-width: 800px) {
-  #content-bg .content .lpg-container #top #welcome {
-    font-size: 4vw;
-  }
-}
-
-@media screen and (max-width: 658px) {
-  #content-bg .content .lpg-container #top #welcome {
-    font-size: 3vw;
-  }
-}
-
-@media screen and (max-width: 500px) {
-  #content-bg .content .lpg-container #top #welcome {
-    font-size: 3.5vw;
-  }
-}
-
-@media screen and (max-width: 425px) {
-  #content-bg .content .lpg-container #top #welcome {
-    font-size: 4vw;
-  }
-}
-
-#content-bg .content .lpg-container .btns {
-  padding: 5% 0;
-}
-
-@media screen and (max-width: 658px) {
-  #content-bg .content .lpg-container .btns {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    width: 60%;
-    margin: 0 auto;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-}
-
-@media screen and (max-width: 500px) {
-  #content-bg .content .lpg-container .btns {
-    padding: 8% 0 0;
-  }
-}
-
-#content-bg .content .lpg-container .btns a {
-  border: 2px solid white;
-  text-decoration: none;
-  color: white;
-  font-weight: 700;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  text-transform: uppercase;
-  font-size: 20px;
-  width: 15%;
-  margin: 0 2%;
-  background-color: transparent;
-  border-radius: 10px;
-  padding: 1%;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-}
-
-@media screen and (max-width: 658px) {
-  #content-bg .content .lpg-container .btns a {
-    width: 75%;
-    margin: 5% 0;
-    font-size: 3.5vw;
-  }
-}
-
-@media screen and (max-width: 500px) {
-  #content-bg .content .lpg-container .btns a {
-    width: 75%;
-    padding: 5%;
-    margin: 6% 0;
-  }
-}
-
-@media screen and (max-width: 375px) {
-  #content-bg .content .lpg-container .btns a {
-    width: 100%;
-    font-size: 5vw;
-  }
-}
-
-#content-bg .content .lpg-container .btns a:hover {
-  background: white;
-  color: red;
-}
-
-#content-bg .content .lpg-container .social {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  width: 30%;
-  margin: 0 auto;
-  padding-top: 4%;
-}
-
-@media screen and (max-width: 1000px) {
-  #content-bg .content .lpg-container .social {
-    width: 45%;
-  }
-}
-
-@media screen and (max-width: 658px) {
-  #content-bg .content .lpg-container .social {
-    width: 50%;
-  }
-}
-
-#content-bg .content .lpg-container .social a {
-  color: white;
-  font-size: 3em;
-}
-
-@media screen and (max-width: 1000px) {
-  #content-bg .content .lpg-container .social a {
-    font-size: 2.5em;
-  }
-}
-
-@media screen and (max-width: 800px) {
-  #content-bg .content .lpg-container .social a {
-    font-size: 2em;
-  }
-}
-
-#content-bg .content .lpg-container .social a:hover {
-  -webkit-text-fill-color: #cc0000;
-  -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: white;
-}
-
-.about-sec {
-  background: white;
-}
-
-.about-sec .container {
-  width: 75%;
-  margin: 0 auto;
-  padding: 5% 0 5%;
-}
-
-@media screen and (max-width: 1024px) {
-  .about-sec .container {
-    width: 90%;
-  }
-}
-
-@media screen and (max-width: 800px) {
-  .about-sec .container {
-    width: 95%;
-  }
-}
-
-@media screen and (max-width: 658px) {
-  .about-sec .container {
-    width: 80%;
-  }
-}
-
-.about-sec .container #about-title {
+main .work-examples .container #work-examples-title {
   text-align: center;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  color: red;
-  font-size: 38px;
-  font-weight: 900;
-  text-transform: uppercase;
-  font-style: italic;
-  text-decoration: underline;
+  font-family: "Montserrat Alternates", sans-serif;
+  font-size: 36px;
+  padding-bottom: 42px;
+  font-weight: 600;
+  text-transform: capitalize;
+  color: #262626;
 }
 
-@media screen and (max-width: 658px) {
-  .about-sec .container #about-title {
-    font-size: 32px;
-  }
-}
-
-@media screen and (max-width: 500px) {
-  .about-sec .container #about-title {
-    font-size: 28px;
-  }
-}
-
-.about-sec .container #story {
-  padding: 2% 0;
-  width: 75%;
-  margin: 0 auto;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  color: black;
-  font-size: 24px;
-  font-weight: 500;
-  line-height: 1.7;
-  text-align: center;
-}
-
-@media screen and (max-width: 1024px) {
-  .about-sec .container #story {
-    width: 85%;
-  }
-}
-
-@media screen and (max-width: 658px) {
-  .about-sec .container #story {
-    font-size: 3.2vw;
-    width: 100%;
-  }
-}
-
-@media screen and (max-width: 500px) {
-  .about-sec .container #story {
-    font-size: 4vw;
-  }
-}
-
-.about-sec .container .skills {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  padding-top: 6%;
-}
-
-@media screen and (max-width: 658px) {
-  .about-sec .container .skills {
-    width: 90%;
-    margin: 0 auto;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-  }
-}
-
-@media screen and (max-width: 658px) {
-  .about-sec .container .skills .my-skill {
-    padding: 3% 0 4%;
-  }
-}
-
-.about-sec .container .skills .my-skill #skills-title {
-  text-align: center;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  color: black;
-  font-size: 28px;
-  font-weight: 900;
-  text-transform: uppercase;
-  font-style: italic;
-  text-decoration: underline;
-  -webkit-text-decoration-color: red;
-          text-decoration-color: red;
-  padding-bottom: 2%;
-}
-
-@media screen and (max-width: 500px) {
-  .about-sec .container .skills .my-skill #skills-title {
-    font-size: 5.5vw;
-  }
-}
-
-.about-sec .container .skills .my-skill #skill-set {
-  width: 75%;
-  margin: 0 auto;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  color: black;
-  font-size: 22px;
-  font-weight: 400;
-  line-height: 1.7;
-  text-align: center;
-}
-
-.about-sec .container .skills .my-skill #skill-set span {
-  color: red;
-}
-
-@media screen and (max-width: 1024px) {
-  .about-sec .container .skills .my-skill #skill-set {
-    width: 90%;
-  }
-}
-
-@media screen and (max-width: 800px) {
-  .about-sec .container .skills .my-skill #skill-set {
-    width: 95%;
-    font-size: 20px;
-  }
-}
-
-@media screen and (max-width: 500px) {
-  .about-sec .container .skills .my-skill #skill-set {
-    font-size: 4.2vw;
-  }
-}
-
-@media screen and (max-width: 658px) {
-  .about-sec .container .skills .new-skill {
-    padding: 4% 0 3%;
-  }
-}
-
-.about-sec .container .skills .new-skill #learning-title {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  color: black;
-  font-size: 28px;
-  font-weight: 900;
-  text-align: center;
-  text-transform: uppercase;
-  font-style: italic;
-  text-decoration: underline;
-  -webkit-text-decoration-color: red;
-          text-decoration-color: red;
-  padding-bottom: 2%;
-}
-
-@media screen and (max-width: 500px) {
-  .about-sec .container .skills .new-skill #learning-title {
-    font-size: 5.5vw;
-  }
-}
-
-.about-sec .container .skills .new-skill #skill-goal {
-  width: 75%;
-  margin: 0 auto;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  color: black;
-  font-size: 22px;
-  font-weight: 400;
-  line-height: 1.7;
-  text-align: center;
-}
-
-.about-sec .container .skills .new-skill #skill-goal span {
-  color: red;
-}
-
-@media screen and (max-width: 1024px) {
-  .about-sec .container .skills .new-skill #skill-goal {
-    width: 90%;
-  }
-}
-
-@media screen and (max-width: 800px) {
-  .about-sec .container .skills .new-skill #skill-goal {
-    width: 95%;
-    font-size: 20px;
-  }
-}
-
-@media screen and (max-width: 500px) {
-  .about-sec .container .skills .new-skill #skill-goal {
-    font-size: 4.2vw;
-  }
-}
-
-.work-sec {
-  background: red;
-}
-
-.work-sec #work-title {
-  text-align: center;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  color: white;
-  font-size: 38px;
-  font-weight: 900;
-  text-transform: uppercase;
-  font-style: italic;
-  text-decoration: underline;
-  padding: 5% 0 4%;
-}
-
-@media screen and (max-width: 658px) {
-  .work-sec #work-title {
-    font-size: 32px;
-  }
-}
-
-@media screen and (max-width: 500px) {
-  .work-sec #work-title {
-    font-size: 28px;
-  }
-}
-
-@media screen and (height: 823px) {
-  .work-sec #work-title {
+@media screen and (max-width: 450px) {
+  main .work-examples .container #work-examples-title {
     font-size: 30px;
   }
 }
 
-@media screen and (height: 568px) {
-  .work-sec #work-title {
-    font-size: 24px;
-  }
-}
-
-.work-sec #grid {
-  height: 8%;
+main .work-examples .container .examples {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -695,245 +274,120 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
 
-.work-sec #grid .project-btns {
-  padding-top: 28px;
+main .work-examples .container .examples .example {
+  width: 30%;
+  text-align: center;
+  padding: 28px 26px 20px;
+  margin: 10px 0;
+  border-radius: 8px;
+  -webkit-box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.75);
 }
 
-.work-sec #grid .project1 {
-  width: 33.33%;
-  margin-bottom: -4px;
-  position: relative;
-}
-
-@media screen and (max-width: 900px) {
-  .work-sec #grid .project1 {
-    width: 50%;
+@media screen and (max-width: 1024px) {
+  main .work-examples .container .examples .example {
+    width: 45%;
   }
 }
 
-@media screen and (height: 1024px) {
-  .work-sec #grid .project1 {
-    margin-bottom: -6px;
+@media screen and (max-width: 768px) {
+  main .work-examples .container .examples .example {
+    width: 70%;
   }
 }
 
-@media screen and (max-width: 658px) {
-  .work-sec #grid .project1 {
-    width: 100%;
+@media screen and (max-width: 600px) {
+  main .work-examples .container .examples .example {
+    width: 80%;
   }
 }
 
-.work-sec #grid .project1 img {
-  width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  height: 50vh;
-}
-
-@media screen and (height: 1366px) {
-  .work-sec #grid .project1 img {
-    height: 30vh;
+@media screen and (max-width: 450px) {
+  main .work-examples .container .examples .example {
+    width: 95%;
   }
 }
 
-.work-sec #grid .project2 {
-  width: 33.33%;
-  margin-bottom: -4px;
-  position: relative;
+main .work-examples .container .examples .example .type {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding-bottom: 26px;
 }
 
-@media screen and (max-width: 900px) {
-  .work-sec #grid .project2 {
-    width: 50%;
-  }
-}
-
-@media screen and (height: 1024px) {
-  .work-sec #grid .project2 {
-    margin-bottom: -6px;
-  }
-}
-
-@media screen and (max-width: 658px) {
-  .work-sec #grid .project2 {
-    width: 100%;
-  }
-}
-
-.work-sec #grid .project2 img {
-  width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  height: 50vh;
-}
-
-@media screen and (height: 1366px) {
-  .work-sec #grid .project2 img {
-    height: 30vh;
-  }
-}
-
-.work-sec #grid .project3 {
-  width: 33.33%;
-  margin-bottom: -4px;
-  position: relative;
-}
-
-@media screen and (max-width: 900px) {
-  .work-sec #grid .project3 {
-    width: 50%;
-  }
-}
-
-@media screen and (height: 1024px) {
-  .work-sec #grid .project3 {
-    margin-bottom: -6px;
-  }
-}
-
-@media screen and (max-width: 658px) {
-  .work-sec #grid .project3 {
-    width: 100%;
-  }
-}
-
-.work-sec #grid .project3 img {
-  height: 50vh;
-  width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-@media screen and (height: 1366px) {
-  .work-sec #grid .project3 img {
-    height: 30vh;
-  }
-}
-
-.work-sec #grid .project4 {
-  width: 33.33%;
-  margin-bottom: -4px;
-  position: relative;
-}
-
-@media screen and (max-width: 900px) {
-  .work-sec #grid .project4 {
-    width: 50%;
-  }
-}
-
-@media screen and (height: 1024px) {
-  .work-sec #grid .project4 {
-    margin-bottom: -6px;
-  }
-}
-
-@media screen and (max-width: 658px) {
-  .work-sec #grid .project4 {
-    width: 100%;
-  }
-}
-
-.work-sec #grid .project4 img {
-  width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  height: 50vh;
-}
-
-@media screen and (height: 1366px) {
-  .work-sec #grid .project4 img {
-    height: 30vh;
-  }
-}
-
-.work-sec #grid .project5 {
-  width: 33.33%;
-  margin-bottom: -4px;
-  position: relative;
-}
-
-@media screen and (max-width: 900px) {
-  .work-sec #grid .project5 {
-    width: 50%;
-  }
-}
-
-@media screen and (height: 1024px) {
-  .work-sec #grid .project5 {
-    margin-bottom: -6px;
-  }
-}
-
-@media screen and (max-width: 658px) {
-  .work-sec #grid .project5 {
-    width: 100%;
-  }
-}
-
-.work-sec #grid .project5 img {
-  width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  height: 50vh;
-}
-
-@media screen and (height: 1366px) {
-  .work-sec #grid .project5 img {
-    height: 30vh;
-  }
-}
-
-.work-sec #grid .project6 {
-  width: 33.33%;
-  margin-bottom: -4px;
-  position: relative;
-}
-
-@media screen and (max-width: 900px) {
-  .work-sec #grid .project6 {
-    width: 50%;
-  }
-}
-
-@media screen and (height: 1024px) {
-  .work-sec #grid .project6 {
-    margin-bottom: -6px;
-  }
-}
-
-@media screen and (max-width: 658px) {
-  .work-sec #grid .project6 {
-    width: 100%;
-  }
-}
-
-.work-sec #grid .project6 img {
-  height: 50vh;
-  width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-@media screen and (height: 1366px) {
-  .work-sec #grid .project6 img {
-    height: 30vh;
-  }
-}
-
-.work-sec #grid .info-slide {
+main .work-examples .container .examples .example .type h6 {
+  border-radius: 60px;
+  padding: 4px 8px;
+  font-family: "Montserrat Alternates", sans-serif;
+  background: #1356b9;
+  font-size: 14px;
+  font-style: italic;
+  font-weight: 700;
   color: white;
-  position: absolute;
-  top: 0;
-  height: 99%;
-  background: red;
-  opacity: .8;
-  padding: 0 10%;
-  display: none;
+  text-transform: uppercase;
+}
+
+main .work-examples .container .examples .example img {
+  width: 160px;
+}
+
+main .work-examples .container .examples .example h5 {
+  padding: 18px 0 8px;
+  font-family: "Lato", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: #1356b9;
+  text-decoration: underline;
+}
+
+main .work-examples .container .examples .example ul {
+  width: 60%;
+  margin: 0 auto;
+  padding: 8px 0;
+}
+
+@media screen and (max-width: 1200px) {
+  main .work-examples .container .examples .example ul {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  main .work-examples .container .examples .example ul {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  main .work-examples .container .examples .example ul {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  main .work-examples .container .examples .example ul {
+    width: 80%;
+  }
+}
+
+main .work-examples .container .examples .example ul li {
+  font-family: "Lato", sans-serif;
+  font-size: 18px;
+  text-align: left;
+  padding-bottom: 4px;
+  color: #626e75;
+}
+
+main .work-examples .container .examples .example .btns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -942,354 +396,65 @@
       justify-content: space-around;
 }
 
-@media screen and (max-width: 1040px) {
-  .work-sec #grid .info-slide {
-    padding: 0 3%;
-  }
+main .work-examples .container .examples .example .btns a {
+  text-decoration: none;
+  background-color: white;
+  color: #1356b9;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  border-radius: 60px;
+  margin: 6px auto;
+  padding: 6px 30px;
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  letter-spacing: 2px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  border: 2px solid #1356b9;
 }
 
-@media screen and (height: 1366px) {
-  .work-sec #grid .info-slide {
-    height: 30vh;
-  }
+main .work-examples .container .examples .example .btns a .fa {
+  padding-right: 3px;
 }
 
-@media screen and (max-width: 960px) {
-  .work-sec #grid .info-slide {
-    padding: 0 6%;
-  }
+main .work-examples .container .examples .example .btns a:hover {
+  color: #f8df28;
+  background: #1356b9;
 }
 
-@media screen and (height: 1024px) {
-  .work-sec #grid .info-slide {
-    padding-top: 14%;
-  }
+main .about {
+  background-image: url("https://i.postimg.cc/2yR5Vf8V/dallas.jpg");
+  background-size: 100% 100%;
 }
 
-@media screen and (max-width: 690px) {
-  .work-sec #grid .info-slide {
-    padding: 5% 3%;
-  }
+main .about .bio-bg {
+  background: rgba(19, 86, 185, 0.8);
 }
 
-@media screen and (max-width: 658px) {
-  .work-sec #grid .info-slide {
-    padding: 0 10%;
-  }
+main .about .bio-bg .bio {
+  padding: 50px 0 42px;
+}
+
+main .about .bio-bg .bio #about-title {
+  text-align: center;
+  font-family: "Montserrat Alternates", sans-serif;
+  font-size: 36px;
+  color: white;
+  padding-bottom: 42px;
+  font-weight: 600;
+  text-transform: capitalize;
 }
 
 @media screen and (max-width: 450px) {
-  .work-sec #grid .info-slide {
-    padding: 0 5%;
-  }
-}
-
-.work-sec #grid .info-slide a {
-  text-decoration: none;
-  text-align: center;
-}
-
-.work-sec #grid .info-slide h1 {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  color: white;
-  font-size: 32px;
-  font-weight: 700;
-  font-style: italic;
-  text-decoration: underline;
-  -webkit-text-decoration-color: white;
-          text-decoration-color: white;
-}
-
-@media screen and (max-width: 1084px) {
-  .work-sec #grid .info-slide h1 {
-    font-size: 24px;
-  }
-}
-
-@media screen and (height: 1024px) {
-  .work-sec #grid .info-slide h1 {
+  main .about .bio-bg .bio #about-title {
     font-size: 30px;
   }
 }
 
-@media screen and (max-width: 658px) {
-  .work-sec #grid .info-slide h1 {
-    font-size: 22px;
-  }
-}
-
-@media screen and (height: 823px) {
-  .work-sec #grid .info-slide h1 {
-    font-size: 28px;
-  }
-}
-
-@media screen and (height: 731px) {
-  .work-sec #grid .info-slide h1 {
-    font-size: 28px;
-  }
-}
-
-.work-sec #grid .info-slide p {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  color: white;
-  font-size: 22px;
-  font-weight: 400;
-  line-height: 1.6;
-  padding: 4% 0 0;
-  text-align: center;
-}
-
-@media screen and (max-width: 1300px) {
-  .work-sec #grid .info-slide p {
-    line-height: 1.3;
-  }
-}
-
-@media screen and (max-width: 1024px) {
-  .work-sec #grid .info-slide p {
-    padding-bottom: 12%;
-    font-size: 20px;
-  }
-}
-
-@media screen and (max-width: 900px) {
-  .work-sec #grid .info-slide p {
-    line-height: 1.5;
-    padding-bottom: 3%;
-  }
-}
-
-@media screen and (height: 667px) {
-  .work-sec #grid .info-slide p {
-    font-size: 19px;
-    line-height: 1.2;
-  }
-}
-
-@media screen and (height: 640px) {
-  .work-sec #grid .info-slide p {
-    font-size: 16px;
-    padding-top: 0;
-  }
-}
-
-@media screen and (height: 568px) {
-  .work-sec #grid .info-slide p {
-    padding-top: 0;
-  }
-}
-
-.work-sec #grid .info-slide .project-btns {
-  width: 75%;
+main .about .bio-bg .bio .container {
+  width: 90%;
   margin: 0 auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-}
-
-@media screen and (max-width: 1440px) {
-  .work-sec #grid .info-slide .project-btns {
-    width: 95%;
-    margin: 0 auto;
-  }
-}
-
-@media screen and (max-width: 1024px) {
-  .work-sec #grid .info-slide .project-btns {
-    width: 100%;
-  }
-}
-
-.work-sec #grid .info-slide .project-btns a {
-  border: 2px solid white;
-  text-decoration: none;
-  color: white;
-  font-weight: 800;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  text-transform: uppercase;
-  font-size: 14px;
-  width: 45%;
-  margin: 0;
-  background-color: transparent;
-  border-radius: 10px;
-  padding: 3%;
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
-}
-
-@media screen and (max-width: 1024px) {
-  .work-sec #grid .info-slide .project-btns a {
-    font-weight: 700;
-  }
-}
-
-@media screen and (max-width: 900px) {
-  .work-sec #grid .info-slide .project-btns a {
-    font-weight: 800;
-    width: 40%;
-  }
-}
-
-@media screen and (max-width: 658px) {
-  .work-sec #grid .info-slide .project-btns a {
-    width: 35%;
-  }
-}
-
-@media screen and (max-width: 450px) {
-  .work-sec #grid .info-slide .project-btns a {
-    font-weight: 700;
-    font-size: 12px;
-    width: 40%;
-  }
-}
-
-.work-sec #grid .info-slide .project-btns a:hover {
-  background: white;
-  color: red;
-  border: 2px solid #cc0000;
-}
-
-.work-sec #grid .info-slide .project-btns a .fa {
-  padding-left: 2%;
-}
-
-.contact-sec {
-  background-image: url("https://i.postimg.cc/T3ChQSQ4/contact.jpg");
-  background-size: 100% 100%;
-}
-
-.contact-sec .contact-content {
-  position: relative;
-  background: rgba(255, 255, 255, 0.8);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  padding: 5% 0;
-}
-
-@media screen and (max-width: 500px) {
-  .contact-sec .contact-content {
-    padding: 0;
-  }
-}
-
-.contact-sec .contact-content #form {
-  padding: 4% 0;
-  background: red;
-  border-radius: 8px;
-  -webkit-box-shadow: 0px 3px 11px 1px rgba(0, 0, 0, 0.75);
-  box-shadow: 0px 3px 11px 1px rgba(0, 0, 0, 0.75);
-  width: 40%;
-  margin: 0 auto;
-}
-
-.contact-sec .contact-content #form a:focus,
-.contact-sec .contact-content #form button:focus,
-.contact-sec .contact-content #form input:focus,
-.contact-sec .contact-content #form textarea:focus {
-  outline: none;
-}
-
-@media screen and (max-width: 1024px) {
-  .contact-sec .contact-content #form {
-    width: 40%;
-  }
-}
-
-@media screen and (max-width: 800px) {
-  .contact-sec .contact-content #form {
-    width: 65%;
-  }
-}
-
-@media screen and (max-width: 500px) {
-  .contact-sec .contact-content #form {
-    width: 100%;
-    border-radius: 0;
-    -webkit-box-shadow: none;
-    box-shadow: none;
-    border-bottom: .5px solid black;
-  }
-}
-
-.contact-sec .contact-content #form .container {
-  text-align: center;
-  width: 85%;
-  margin: 0 auto;
-}
-
-.contact-sec .contact-content #form .container #contact-title {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  color: white;
-  font-size: 30px;
-  font-weight: 800;
-  text-decoration: underline;
-  font-style: italic;
-  text-transform: uppercase;
-  padding-bottom: 4%;
-}
-
-.contact-sec .contact-content #form .container #form-statement {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  color: white;
-  font-size: 18px;
-  font-weight: 500;
-}
-
-.contact-sec .contact-content #form .container .input-sec {
-  padding: 5% 0 0 0;
-}
-
-.contact-sec .contact-content #form .container .input-sec .name {
-  padding-bottom: 5%;
-  width: 99%;
-}
-
-.contact-sec .contact-content #form .container .input-sec .name input {
-  padding-left: 1%;
-  padding-bottom: 1%;
-  background: red;
-  border: none;
-  border-bottom: 1px solid white;
-  width: 100%;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  color: white;
-  font-size: 20px;
-  font-weight: 600;
-}
-
-.contact-sec .contact-content #form .container .input-sec .name input::-webkit-input-placeholder {
-  color: white;
-}
-
-.contact-sec .contact-content #form .container .input-sec .name input:-ms-input-placeholder {
-  color: white;
-}
-
-.contact-sec .contact-content #form .container .input-sec .name input::-ms-input-placeholder {
-  color: white;
-}
-
-.contact-sec .contact-content #form .container .input-sec .name input::placeholder {
-  color: white;
-}
-
-.contact-sec .contact-content #form .container .input-sec .email-phone {
-  padding-bottom: 8%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1302,71 +467,358 @@
           justify-content: space-between;
 }
 
-.contact-sec .contact-content #form .container .input-sec .email-phone input {
-  padding-left: 1%;
-  padding-bottom: 1%;
-  background: red;
-  border: none;
-  border-bottom: 1px solid white;
-  width: 48%;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  color: white;
-  font-size: 18px;
-  font-weight: 600;
+@media screen and (max-width: 900px) {
+  main .about .bio-bg .bio .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 
-.contact-sec .contact-content #form .container .input-sec .email-phone input::-webkit-input-placeholder {
-  color: white;
+main .about .bio-bg .bio .container .img {
+  width: 40%;
+  text-align: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 
-.contact-sec .contact-content #form .container .input-sec .email-phone input:-ms-input-placeholder {
-  color: white;
+main .about .bio-bg .bio .container .img img {
+  width: 320px;
+  border-radius: 50%;
+  border: 2px solid #f8df28;
 }
 
-.contact-sec .contact-content #form .container .input-sec .email-phone input::-ms-input-placeholder {
-  color: white;
+@media screen and (max-width: 1024px) {
+  main .about .bio-bg .bio .container .img img {
+    width: 100%;
+  }
 }
 
-.contact-sec .contact-content #form .container .input-sec .email-phone input::placeholder {
-  color: white;
+main .about .bio-bg .bio .container .text {
+  width: 50%;
 }
 
-.contact-sec .contact-content #form .container .input-sec textarea {
-  resize: none;
-  border-radius: 4px;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  color: black;
-  font-size: 16px;
-  font-weight: 400;
-  margin-bottom: 5%;
-  width: 100%;
-  height: 15vh;
+@media screen and (max-width: 900px) {
+  main .about .bio-bg .bio .container .text {
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 10%;
+  }
 }
 
-.contact-sec .contact-content #form .container .input-sec #submit-btn {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+@media screen and (max-width: 600px) {
+  main .about .bio-bg .bio .container .text {
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+
+main .about .bio-bg .bio .container .text p {
+  font-family: "Lato", sans-serif;
   color: white;
-  font-size: 20px;
-  font-weight: 700;
-  text-transform: uppercase;
-  background: transparent;
-  border: 1.5px solid white;
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 1.3;
+}
+
+@media screen and (max-width: 1024px) {
+  main .about .bio-bg .bio .container .text p {
+    font-size: 18px;
+  }
+}
+
+main .about .bio-bg .bio .container .text .skill-set {
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.3);
   border-radius: 8px;
-  padding: 2% 10%;
-  margin-left: 4%;
-  -webkit-transition: .4s;
-  transition: .4s;
+  margin-top: 26px;
+  -webkit-box-shadow: 0px 1px 9px 0px black;
+  box-shadow: 0px 1px 9px 0px black;
 }
 
-.contact-sec .contact-content #form .container .input-sec #submit-btn:hover {
-  color: red;
-  background: white;
-  border-color: red;
+@media screen and (max-width: 600px) {
+  main .about .bio-bg .bio .container .text .skill-set {
+    padding: 15px;
+  }
 }
 
+main .about .bio-bg .bio .container .text .skill-set #title {
+  color: #f8df28;
+  text-align: center;
+  font-family: "Lato", sans-serif;
+  font-weight: 900;
+  font-size: 28px;
+  padding-bottom: 16px;
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 1024px) {
+  main .about .bio-bg .bio .container .text .skill-set #title {
+    font-size: 24px;
+  }
+}
+
+main .about .bio-bg .bio .container .text .skill-set ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding-top: 20px;
+}
+
+@media screen and (max-width: 400px) {
+  main .about .bio-bg .bio .container .text .skill-set ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding-top: 5px;
+  }
+}
+
+main .about .bio-bg .bio .container .text .skill-set ul li {
+  list-style: none;
+  width: 45%;
+  font-weight: 900;
+  font-family: "Lato", sans-serif;
+  font-size: 18px;
+  color: #f8df28;
+  padding-bottom: 8px;
+}
+
+@media screen and (max-width: 1024px) {
+  main .about .bio-bg .bio .container .text .skill-set ul li {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  main .about .bio-bg .bio .container .text .skill-set ul li {
+    width: 48%;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  main .about .bio-bg .bio .container .text .skill-set ul li {
+    width: 100%;
+    text-align: center;
+    font-size: 17px;
+    font-weight: 700;
+    padding-bottom: 10px;
+  }
+}
+
+main .contact .container {
+  width: 90%;
+  margin: 0 auto;
+  padding: 42px 0 50px;
+}
+
+main .contact .container #contact-title {
+  text-align: center;
+  font-family: "Montserrat Alternates", sans-serif;
+  font-size: 36px;
+  padding-bottom: 38px;
+  font-weight: 600;
+  text-transform: capitalize;
+  color: #262626;
+}
+
+@media screen and (max-width: 450px) {
+  main .contact .container #contact-title {
+    font-size: 30px;
+  }
+}
+
+main .contact .container .form-sec {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-top: 10px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media screen and (max-width: 900px) {
+  main .contact .container .form-sec {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+main .contact .container .form-sec form {
+  width: 50%;
+}
+
+main .contact .container .form-sec form input:focus,
+main .contact .container .form-sec form textarea:focus {
+  outline: none;
+}
+
+@media screen and (max-width: 900px) {
+  main .contact .container .form-sec form {
+    width: 90%;
+  }
+}
+
+main .contact .container .form-sec form .fields {
+  text-align: center;
+}
+
+main .contact .container .form-sec form .fields .credentails {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding-bottom: 20px;
+}
+
+@media screen and (max-width: 450px) {
+  main .contact .container .form-sec form .fields .credentails {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+main .contact .container .form-sec form .fields .credentails .field {
+  width: 48%;
+}
+
+@media screen and (max-width: 450px) {
+  main .contact .container .form-sec form .fields .credentails .field {
+    width: 100%;
+  }
+}
+
+main .contact .container .form-sec form .fields .credentails .field label {
+  position: absolute;
+  color: transparent;
+}
+
+main .contact .container .form-sec form .fields .credentails .field input {
+  font-family: "Lato", sans-serif;
+  font-size: 20px;
+  width: 90%;
+  border: 2px solid #90a3b2;
+  border-radius: 8px;
+  padding: 8px;
+}
+
+@media screen and (max-width: 450px) {
+  main .contact .container .form-sec form .fields .credentails .field input {
+    width: 95%;
+  }
+}
+
+main .contact .container .form-sec form .fields .credentails .email {
+  text-align: start;
+}
+
+@media screen and (max-width: 450px) {
+  main .contact .container .form-sec form .fields .credentails .email {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+}
+
+main .contact .container .form-sec form .fields .credentails .name {
+  text-align: end;
+}
+
+@media screen and (max-width: 450px) {
+  main .contact .container .form-sec form .fields .credentails .name {
+    text-align: center;
+  }
+}
+
+main .contact .container .form-sec form .fields .message {
+  text-align: center;
+  padding-bottom: 14px;
+}
+
+main .contact .container .form-sec form .fields .message label {
+  position: absolute;
+  color: transparent;
+}
+
+main .contact .container .form-sec form .fields .message textarea {
+  width: 95%;
+  border-radius: 8px;
+  padding: 8px;
+  resize: none;
+  font-family: "Lato", sans-serif;
+  font-size: 20px;
+  border: 2px solid #90a3b2;
+}
+
+main .contact .container .form-sec form .fields #submit-btn {
+  width: 98%;
+  border-radius: 60px;
+  font-family: "Lato", sans-serif;
+  color: white;
+  background: #1356b9;
+  font-size: 24px;
+  border: none;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  -webkit-transition: .3s;
+  transition: .3s;
+  font-weight: 700;
+}
+
+main .contact .container .form-sec form .fields #submit-btn:hover {
+  color: #f8df28;
+}
+
+main .contact .container .form-sec .img {
+  width: 50%;
+}
+
+@media screen and (max-width: 900px) {
+  main .contact .container .form-sec .img {
+    width: 90%;
+    padding-top: 5%;
+  }
+}
+
+main .contact .container .form-sec .img img {
+  width: 100%;
+}
+
+/* Footer */
 footer {
+  background: #1356b9;
+  text-align: center;
+  color: white;
   padding: 1% 0;
-  background: red;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1384,6 +836,7 @@ footer {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    padding-bottom: 20px;
   }
 }
 
@@ -1395,7 +848,9 @@ footer .social {
 @media screen and (max-width: 500px) {
   footer .social {
     width: 80%;
+    margin: 0 auto;
     text-align: center;
+    padding: 20px 0 16px;
   }
 }
 
@@ -1404,30 +859,27 @@ footer .social a {
   text-decoration: none;
   -webkit-transition: .3s;
   transition: .3s;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  color: white;
+  font-family: "Lato", sans-serif;
+  color: #90a3b2;
   font-size: 32px;
   font-weight: 700;
 }
 
 @media screen and (max-width: 500px) {
   footer .social a {
-    font-size: 7vw;
-    padding: 0 4%;
+    padding: 0 8px;
   }
 }
 
 footer .social a:hover {
-  -webkit-text-fill-color: #cc0000;
-  -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: white;
+  color: #f4ac12;
 }
 
 footer #copyrights {
   width: 60%;
   margin: 0 auto;
-  text-align: center;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  text-align: right;
+  font-family: "Lato", sans-serif;
   color: white;
   font-size: 14px;
   font-weight: 500;
@@ -1438,8 +890,64 @@ footer #copyrights {
 
 @media screen and (max-width: 500px) {
   footer #copyrights {
-    font-size: 8px;
-    padding-top: 8px;
+    width: 90%;
+    text-align: center;
+    font-size: 12px;
   }
+}
+
+/* Mobile-Menu */
+.mobile-menu {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.9);
+}
+
+.mobile-menu .menu-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: right;
+  height: 100vh;
+  width: 40vw;
+  padding: 29px 14.5% 0 0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+@media screen and (max-width: 600px) {
+  .mobile-menu .menu-container {
+    width: 60vw;
+  }
+}
+
+.mobile-menu .menu-container #close-btn {
+  padding-bottom: 20px;
+}
+
+.mobile-menu .menu-container a {
+  text-decoration: none;
+  font-family: "Lato", sans-serif;
+  font-weight: 600;
+  color: #f8df28;
+  text-transform: capitalize;
+  margin-bottom: 30px;
+  font-size: 26px;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.mobile-menu .menu-container a:hover {
+  color: #1356b9;
+}
+
+.mobile-menu .menu-container .social-sec a {
+  font-size: 30px;
+  margin-left: 28px;
 }
 /*# sourceMappingURL=main.css.map */
